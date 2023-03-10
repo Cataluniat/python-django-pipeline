@@ -21,13 +21,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint
-      run: |
-       sudo apt update
         
     - name: Test
       run: |
-        sudo apt update        
+        cd tests
+        python3 -m unittest test_app.py
     - name: Build and Push in Docker Hub
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
