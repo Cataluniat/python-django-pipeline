@@ -25,7 +25,7 @@ jobs:
       run: |
        sudo apt update
         
-    - name: Test with pytest
+    - name: Test
       run: |
         sudo apt update        
     - name: Build and Push in Docker Hub
