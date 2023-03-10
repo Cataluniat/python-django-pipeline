@@ -27,8 +27,7 @@ jobs:
         
     - name: Test with pytest
       run: |
-        export PYTHONPATH=src
-        pytest        
+        sudo apt update        
     - name: Build and Push in Docker Hub
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
