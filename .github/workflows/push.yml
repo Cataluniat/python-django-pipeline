@@ -24,7 +24,7 @@ jobs:
     - name: Build and Push in Docker Hub
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: cataluniat1/python-django-pipeline:latest
+        image: cataluniat1/python-django-pipeline
         tag: latest
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
