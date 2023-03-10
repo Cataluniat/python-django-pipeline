@@ -1,7 +1,7 @@
-# Python Pipeline
-> Flask App Workflow using GitHub Actions and Terraform.
+# Python Django Pipeline
+> Django crud App Workflow using GitHub Actions and Terraform.
 
-Test the code, build a Docker image, push to Docker Repo and deploy on a EC2 (AWS) instance.
+Build and push to Docker Repo and deploy on a EC2 (AWS) instance.
 
 ### Prerequisites
 
@@ -32,26 +32,23 @@ On `.github/workflow/push.yml`
 image: docker-user/docker-repo
 ```
 
-## Deploy infrastructure
+## Deploy
 ```sh
 ./deploy.sh
 ```
 
-### Connecting to your Linux instance using SSH
+### SSH 
 ```sh
 ssh -i ./tf/private/key_access.pem -A ubuntu@[instance IP]
 ```
 
-## Destroy infrastructure
+## Destroy 
 ```sh
 ./down.sh
 ```
 
-## Deploy CI/CD
-On main branch...
+## Deploy
+On master branch
 ```sh
 git push
 ```
-
-## Authors
-* **Carlos Catalán** - [Github](https://github.com/catalan94)
